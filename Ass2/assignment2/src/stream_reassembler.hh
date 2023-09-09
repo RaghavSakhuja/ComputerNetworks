@@ -8,14 +8,27 @@
 #include <deque>
 #include <iostream>
 #include <string>
+#include <map>
 
 //! \brief A class that assembles a series of excerpts from a byte stream (possibly out of order,
 //! possibly overlapping) into an in-order byte stream.
 class StreamReassembler {
   private:
     // Your code here -- add private members as necessary.
+    struct substring
+    {
+      std::string data;
+      bool eof;
+      substring(const std::string &data, const bool eof):data(data),eof(eof){}
+    };
+    
 
     ByteStream _output;  //!< The reassembled in-order byte stream
+    std::map<size_t,substring> buffer;
+    size_t buffersize;
+    size_t capacity;
+    size_t acknowledged;
+
 
   public:
     //! \brief Construct a `StreamReassembler` that will store up to `capacity` bytes.
