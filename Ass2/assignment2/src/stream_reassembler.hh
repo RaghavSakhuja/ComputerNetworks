@@ -15,16 +15,16 @@
 class StreamReassembler {
   private:
     // Your code here -- add private members as necessary.
-    struct substring
+    struct packet
     {
       std::string data;
       bool eof;
-      substring(const std::string &data, const bool eof):data(data),eof(eof){}
+      packet(const std::string &data, const bool eof):data(data),eof(eof){}
     };
     
 
     ByteStream _output;  //!< The reassembled in-order byte stream
-    std::map<size_t,substring> buffer;
+    std::map<size_t,packet> buffer;
     size_t buffersize;
     size_t capacity;
     size_t acknowledged;
@@ -67,3 +67,27 @@ class StreamReassembler {
 };
 
 #endif  // SPONGE_LIBSPONGE_STREAM_REASSEMBLER_HH
+
+
+/*
+
+home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/src/stream_reassembler.cc:37:28:   required from here
+/usr/include/c++/11/tuple:1820:9: error: no matching function for call to ‘StreamReassembler::packet::packet()’
+ 1820 |         second(std::forward<_Args2>(std::get<_Indexes2>(__tuple2))...)
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/src/stream_reassembler.cc:1:
+/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/src/stream_reassembler.hh:22:7: note: candidate: ‘StreamReassembler::packet::packet(const string&, bool)’
+   22 |       packet(const std::string &data, const bool eof):data(data),eof(eof){}
+      |       ^~~~~~
+/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/src/stream_reassembler.hh:22:7: note:   candidate expects 2 arguments, 0 provided
+/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/src/stream_reassembler.hh:18:12: note: candidate: ‘StreamReassembler::packet::packet(const StreamReassembler::packet&)’
+   18 |     struct packet
+      |            ^~~~~~
+/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/src/stream_reassembler.hh:18:12: note:   candidate expects 1 argument, 0 provided
+/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/src/stream_reassembler.hh:18:12: note: candidate: ‘StreamReassembler::packet::packet(StreamReassembler::packet&&)’
+/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/src/stream_reassembler.hh:18:12: note:   candidate expects 1 argument, 0 provided
+make[2]: *** [src/CMakeFiles/tcp_reciever.dir/build.make:90: src/CMakeFiles/tcp_reciever.dir/stream_reassembler.cc.o] Error 1
+
+
+*/
+

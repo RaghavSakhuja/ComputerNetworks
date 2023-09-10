@@ -45,7 +45,7 @@ void StreamReassembler::push_substring(const string &data, const size_t index, c
                 return;
         }
         else{
-            buffer[start]=substring(data,eof);
+            buffer[start]=packet(data,eof);
             buffersize+=data.size();
         }
     }
