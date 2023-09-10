@@ -29,6 +29,7 @@ size_t ByteStream::write(const string &data) {
       bytesAcc++;
     }
     else
+      set_error();
       break;
   }
   return bytesAcc;
@@ -53,6 +54,8 @@ string ByteStream::peek_output(const size_t len) const {
 
 //! \param[in] len bytes will be removed from the output side of the buffer
 void ByteStream::pop_output(const size_t len) {
+  if(len>buffer.size())
+    set_error();
   size_t Len = min(len,buffer.size());
   buffer.erase(buffer.begin(),buffer.begin()+Len);
   bytesRead+=Len;

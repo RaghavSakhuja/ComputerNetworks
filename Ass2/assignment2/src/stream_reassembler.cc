@@ -19,6 +19,9 @@ void StreamReassembler::push_substring(const string &data, const size_t index, c
 {
     size_t start=index;
     size_t end=index+data.size();
+    if(index>capacity)
+        return;
+
     if(end<=acknowledged)
         return;
     if(start<=acknowledged){
@@ -27,8 +30,24 @@ void StreamReassembler::push_substring(const string &data, const size_t index, c
         acknowledged=end;
     }
     else{
-        buffer.insert({start,{data,eof}});
-        buffersize+=data.size();
+        if(buffersize+data.size()>capacity)
+            return;
+        
+        if(buffer.find(start)!=buffer.end()){
+            if(buffer[start].eof)
+                return;
+            if(end>start+buffer[start].data.size()){
+                buffer[start].data=data.substr(0,start+buffer[start].data.size()-end);
+                buffer[start].eof=eof;
+                buffersize+=data.size()-buffer[start].data.size();
+            }
+            else
+                return;
+        }
+        else{
+            buffer[start]=substring(data,eof);
+            buffersize+=data.size();
+        }
     }
 }
 size_t StreamReassembler::unassembled_bytes() const { 
