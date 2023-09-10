@@ -33,10 +33,6 @@ void StreamReassembler::push_substring(const string &data, const size_t index, c
         if(buffersize+data.size()>capacity)
             return;
         
-<<<<<<< HEAD
-        buffer.insert({start,{data,eof}});
-        buffersize+=data.size();
-=======
         if(buffer.find(start)!=buffer.end()){
             if(buffer[start].eof)
                 return;
@@ -52,7 +48,6 @@ void StreamReassembler::push_substring(const string &data, const size_t index, c
             buffer[start]=substring(data,eof);
             buffersize+=data.size();
         }
->>>>>>> refs/remotes/origin/main
     }
 }
 size_t StreamReassembler::unassembled_bytes() const { 
