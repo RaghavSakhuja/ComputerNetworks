@@ -1,5 +1,5 @@
 #include "byte_stream.hh"
-
+#include <iostream>
 #include <algorithm>
 
 // You will need to add private members to the class declaration in `byte_stream.hh`
@@ -10,15 +10,17 @@
 using namespace std;
 
 ByteStream::ByteStream(const size_t capa)
-  :capacity(capa),InputEnded(false),_error(false)
+  :capacity(capa),_error(false)
   {
+    InputEnded = false;
     bytesWritten = 0;
     bytesRead = 0;
   }
 
 size_t ByteStream::write(const string &data) {
-  if(InputEnded || _error)
+  if(InputEnded)
     return 0;
+  
   size_t bytesAcc=0;
   for(auto i:data)
   {
@@ -35,8 +37,7 @@ size_t ByteStream::write(const string &data) {
 }
 
 size_t ByteStream::remaining_capacity() const {
-  if(InputEnded || _error)
-    return 0;
+  cout<<"capacity: "<<capacity-buffer.size()<<endl;
   return capacity-buffer.size();
 }
 

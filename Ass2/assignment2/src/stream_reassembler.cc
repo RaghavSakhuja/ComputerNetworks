@@ -27,6 +27,9 @@ void StreamReassembler::push_substring(const string &data, const size_t index, c
         acknowledged=end;
     }
     else{
+        if(buffersize+data.size()>capacity)
+            return;
+        
         buffer.insert({start,{data,eof}});
         buffersize+=data.size();
     }
