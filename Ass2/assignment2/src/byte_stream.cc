@@ -31,7 +31,6 @@ size_t ByteStream::write(const string &data) {
       bytesAcc++;
     }
     else
-      set_error();
       break;
   }
   return bytesAcc;
@@ -66,6 +65,9 @@ void ByteStream::pop_output(const size_t len) {
 //! \param[in] len bytes will be popped and returned
 //! \returns a string
 std::string ByteStream::read(const size_t len) {
+  if(len>buffer.size())
+    set_error();
+    return "";
   string data=peek_output(len);
   pop_output(len);
   return data;

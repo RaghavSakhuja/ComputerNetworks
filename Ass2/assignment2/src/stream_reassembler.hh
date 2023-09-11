@@ -20,6 +20,7 @@ class StreamReassembler {
       std::string data;
       bool eof;
       packet(const std::string &data, const bool eof):data(data),eof(eof){}
+      packet():data(""),eof(false){}
     };
     
 
@@ -28,6 +29,9 @@ class StreamReassembler {
     size_t buffersize;
     size_t capacity;
     size_t acknowledged;
+    bool reached_eof;
+
+    
 
 
   public:

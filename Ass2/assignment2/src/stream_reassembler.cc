@@ -7,8 +7,11 @@ void DUMMY_CODE(Targs &&... /* unused */) {}
 
 using namespace std;
 
+
+
+
 StreamReassembler::StreamReassembler(const size_t capa)
-    :_output(capa),capacity(capa),acknowledged(0),buffersize(0)
+    :_output(capa),capacity(capa),acknowledged(0),buffersize(0),reached_eof(false)
 {}
 
 
@@ -19,36 +22,42 @@ void StreamReassembler::push_substring(const string &data, const size_t index, c
 {
     size_t start=index;
     size_t end=index+data.size();
-    if(index>capacity)
+    size_t initial=acknowledged;
+    if(end>acknowledged+capacity)
         return;
 
-    if(end<=acknowledged)
+    if(end<=acknowledged){
+        if(eof)
+            reached_eof=true;
+        if(reached_eof && empty()){
+            _output.end_input();
+        }
         return;
+    }
     if(start<=acknowledged){
         start=acknowledged;
         _output.write(data.substr(acknowledged-index));
         acknowledged=end;
     }
     else{
-        if(buffersize+data.size()>capacity)
-            return;
-        
-        if(buffer.find(start)!=buffer.end()){
-            if(buffer[start].eof)
-                return;
-            if(end>start+buffer[start].data.size()){
-                buffer[start].data=data.substr(0,start+buffer[start].data.size()-end);
-                buffer[start].eof=eof;
-                buffersize+=data.size()-buffer[start].data.size();
+        while(initial<acknowledged+capacity && initial<end){
+            if(buffer.find(initial)==buffer.end()){
+                buffer[initial]=packet();
             }
-            else
-                return;
+            if(initial>=start){
+                buffer[initial].data+=data[initial-start];
+                buffersize++;
+            }
+            initial++;
         }
-        else{
-            buffer[start]=packet(data,eof);
-            buffersize+=data.size();
-        }
+
     }
+
+    if(reached_eof && empty()){
+        _output.end_input();
+    }
+
+
 }
 size_t StreamReassembler::unassembled_bytes() const { 
     return buffersize;
