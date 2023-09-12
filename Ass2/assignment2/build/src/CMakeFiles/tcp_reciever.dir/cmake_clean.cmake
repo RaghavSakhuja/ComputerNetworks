@@ -11,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/tcp_reciever.dir/tcp_helpers/tcp_state.cc.o.d"
   "CMakeFiles/tcp_reciever.dir/tcp_receiver.cc.o"
   "CMakeFiles/tcp_reciever.dir/tcp_receiver.cc.o.d"
+  "CMakeFiles/tcp_reciever.dir/test.cc.o"
+  "CMakeFiles/tcp_reciever.dir/test.cc.o.d"
   "CMakeFiles/tcp_reciever.dir/util/address.cc.o"
   "CMakeFiles/tcp_reciever.dir/util/address.cc.o.d"
   "CMakeFiles/tcp_reciever.dir/util/buffer.cc.o"

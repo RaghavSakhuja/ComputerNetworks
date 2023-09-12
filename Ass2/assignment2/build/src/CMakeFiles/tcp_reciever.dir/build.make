@@ -153,10 +153,24 @@ src/CMakeFiles/tcp_reciever.dir/tcp_receiver.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tcp_reciever.dir/tcp_receiver.cc.s"
 	cd /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/src/tcp_receiver.cc -o CMakeFiles/tcp_reciever.dir/tcp_receiver.cc.s
 
+src/CMakeFiles/tcp_reciever.dir/test.cc.o: src/CMakeFiles/tcp_reciever.dir/flags.make
+src/CMakeFiles/tcp_reciever.dir/test.cc.o: /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/src/test.cc
+src/CMakeFiles/tcp_reciever.dir/test.cc.o: src/CMakeFiles/tcp_reciever.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/CMakeFiles/tcp_reciever.dir/test.cc.o"
+	cd /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/tcp_reciever.dir/test.cc.o -MF CMakeFiles/tcp_reciever.dir/test.cc.o.d -o CMakeFiles/tcp_reciever.dir/test.cc.o -c /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/src/test.cc
+
+src/CMakeFiles/tcp_reciever.dir/test.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tcp_reciever.dir/test.cc.i"
+	cd /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/src/test.cc > CMakeFiles/tcp_reciever.dir/test.cc.i
+
+src/CMakeFiles/tcp_reciever.dir/test.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tcp_reciever.dir/test.cc.s"
+	cd /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/src/test.cc -o CMakeFiles/tcp_reciever.dir/test.cc.s
+
 src/CMakeFiles/tcp_reciever.dir/util/address.cc.o: src/CMakeFiles/tcp_reciever.dir/flags.make
 src/CMakeFiles/tcp_reciever.dir/util/address.cc.o: /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/src/util/address.cc
 src/CMakeFiles/tcp_reciever.dir/util/address.cc.o: src/CMakeFiles/tcp_reciever.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/CMakeFiles/tcp_reciever.dir/util/address.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/CMakeFiles/tcp_reciever.dir/util/address.cc.o"
 	cd /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/tcp_reciever.dir/util/address.cc.o -MF CMakeFiles/tcp_reciever.dir/util/address.cc.o.d -o CMakeFiles/tcp_reciever.dir/util/address.cc.o -c /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/src/util/address.cc
 
 src/CMakeFiles/tcp_reciever.dir/util/address.cc.i: cmake_force
@@ -170,7 +184,7 @@ src/CMakeFiles/tcp_reciever.dir/util/address.cc.s: cmake_force
 src/CMakeFiles/tcp_reciever.dir/util/buffer.cc.o: src/CMakeFiles/tcp_reciever.dir/flags.make
 src/CMakeFiles/tcp_reciever.dir/util/buffer.cc.o: /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/src/util/buffer.cc
 src/CMakeFiles/tcp_reciever.dir/util/buffer.cc.o: src/CMakeFiles/tcp_reciever.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/CMakeFiles/tcp_reciever.dir/util/buffer.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/CMakeFiles/tcp_reciever.dir/util/buffer.cc.o"
 	cd /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/tcp_reciever.dir/util/buffer.cc.o -MF CMakeFiles/tcp_reciever.dir/util/buffer.cc.o.d -o CMakeFiles/tcp_reciever.dir/util/buffer.cc.o -c /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/src/util/buffer.cc
 
 src/CMakeFiles/tcp_reciever.dir/util/buffer.cc.i: cmake_force
@@ -184,7 +198,7 @@ src/CMakeFiles/tcp_reciever.dir/util/buffer.cc.s: cmake_force
 src/CMakeFiles/tcp_reciever.dir/util/eventloop.cc.o: src/CMakeFiles/tcp_reciever.dir/flags.make
 src/CMakeFiles/tcp_reciever.dir/util/eventloop.cc.o: /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/src/util/eventloop.cc
 src/CMakeFiles/tcp_reciever.dir/util/eventloop.cc.o: src/CMakeFiles/tcp_reciever.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/CMakeFiles/tcp_reciever.dir/util/eventloop.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/CMakeFiles/tcp_reciever.dir/util/eventloop.cc.o"
 	cd /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/tcp_reciever.dir/util/eventloop.cc.o -MF CMakeFiles/tcp_reciever.dir/util/eventloop.cc.o.d -o CMakeFiles/tcp_reciever.dir/util/eventloop.cc.o -c /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/src/util/eventloop.cc
 
 src/CMakeFiles/tcp_reciever.dir/util/eventloop.cc.i: cmake_force
@@ -198,7 +212,7 @@ src/CMakeFiles/tcp_reciever.dir/util/eventloop.cc.s: cmake_force
 src/CMakeFiles/tcp_reciever.dir/util/file_descriptor.cc.o: src/CMakeFiles/tcp_reciever.dir/flags.make
 src/CMakeFiles/tcp_reciever.dir/util/file_descriptor.cc.o: /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/src/util/file_descriptor.cc
 src/CMakeFiles/tcp_reciever.dir/util/file_descriptor.cc.o: src/CMakeFiles/tcp_reciever.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/CMakeFiles/tcp_reciever.dir/util/file_descriptor.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object src/CMakeFiles/tcp_reciever.dir/util/file_descriptor.cc.o"
 	cd /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/tcp_reciever.dir/util/file_descriptor.cc.o -MF CMakeFiles/tcp_reciever.dir/util/file_descriptor.cc.o.d -o CMakeFiles/tcp_reciever.dir/util/file_descriptor.cc.o -c /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/src/util/file_descriptor.cc
 
 src/CMakeFiles/tcp_reciever.dir/util/file_descriptor.cc.i: cmake_force
@@ -212,7 +226,7 @@ src/CMakeFiles/tcp_reciever.dir/util/file_descriptor.cc.s: cmake_force
 src/CMakeFiles/tcp_reciever.dir/util/parser.cc.o: src/CMakeFiles/tcp_reciever.dir/flags.make
 src/CMakeFiles/tcp_reciever.dir/util/parser.cc.o: /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/src/util/parser.cc
 src/CMakeFiles/tcp_reciever.dir/util/parser.cc.o: src/CMakeFiles/tcp_reciever.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object src/CMakeFiles/tcp_reciever.dir/util/parser.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object src/CMakeFiles/tcp_reciever.dir/util/parser.cc.o"
 	cd /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/tcp_reciever.dir/util/parser.cc.o -MF CMakeFiles/tcp_reciever.dir/util/parser.cc.o.d -o CMakeFiles/tcp_reciever.dir/util/parser.cc.o -c /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/src/util/parser.cc
 
 src/CMakeFiles/tcp_reciever.dir/util/parser.cc.i: cmake_force
@@ -226,7 +240,7 @@ src/CMakeFiles/tcp_reciever.dir/util/parser.cc.s: cmake_force
 src/CMakeFiles/tcp_reciever.dir/util/socket.cc.o: src/CMakeFiles/tcp_reciever.dir/flags.make
 src/CMakeFiles/tcp_reciever.dir/util/socket.cc.o: /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/src/util/socket.cc
 src/CMakeFiles/tcp_reciever.dir/util/socket.cc.o: src/CMakeFiles/tcp_reciever.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object src/CMakeFiles/tcp_reciever.dir/util/socket.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object src/CMakeFiles/tcp_reciever.dir/util/socket.cc.o"
 	cd /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/tcp_reciever.dir/util/socket.cc.o -MF CMakeFiles/tcp_reciever.dir/util/socket.cc.o.d -o CMakeFiles/tcp_reciever.dir/util/socket.cc.o -c /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/src/util/socket.cc
 
 src/CMakeFiles/tcp_reciever.dir/util/socket.cc.i: cmake_force
@@ -240,7 +254,7 @@ src/CMakeFiles/tcp_reciever.dir/util/socket.cc.s: cmake_force
 src/CMakeFiles/tcp_reciever.dir/util/util.cc.o: src/CMakeFiles/tcp_reciever.dir/flags.make
 src/CMakeFiles/tcp_reciever.dir/util/util.cc.o: /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/src/util/util.cc
 src/CMakeFiles/tcp_reciever.dir/util/util.cc.o: src/CMakeFiles/tcp_reciever.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object src/CMakeFiles/tcp_reciever.dir/util/util.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object src/CMakeFiles/tcp_reciever.dir/util/util.cc.o"
 	cd /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/tcp_reciever.dir/util/util.cc.o -MF CMakeFiles/tcp_reciever.dir/util/util.cc.o.d -o CMakeFiles/tcp_reciever.dir/util/util.cc.o -c /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/src/util/util.cc
 
 src/CMakeFiles/tcp_reciever.dir/util/util.cc.i: cmake_force
@@ -254,7 +268,7 @@ src/CMakeFiles/tcp_reciever.dir/util/util.cc.s: cmake_force
 src/CMakeFiles/tcp_reciever.dir/wrapping_integers.cc.o: src/CMakeFiles/tcp_reciever.dir/flags.make
 src/CMakeFiles/tcp_reciever.dir/wrapping_integers.cc.o: /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/src/wrapping_integers.cc
 src/CMakeFiles/tcp_reciever.dir/wrapping_integers.cc.o: src/CMakeFiles/tcp_reciever.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object src/CMakeFiles/tcp_reciever.dir/wrapping_integers.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object src/CMakeFiles/tcp_reciever.dir/wrapping_integers.cc.o"
 	cd /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/tcp_reciever.dir/wrapping_integers.cc.o -MF CMakeFiles/tcp_reciever.dir/wrapping_integers.cc.o.d -o CMakeFiles/tcp_reciever.dir/wrapping_integers.cc.o -c /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/src/wrapping_integers.cc
 
 src/CMakeFiles/tcp_reciever.dir/wrapping_integers.cc.i: cmake_force
@@ -273,6 +287,7 @@ tcp_reciever_OBJECTS = \
 "CMakeFiles/tcp_reciever.dir/tcp_helpers/tcp_segment.cc.o" \
 "CMakeFiles/tcp_reciever.dir/tcp_helpers/tcp_state.cc.o" \
 "CMakeFiles/tcp_reciever.dir/tcp_receiver.cc.o" \
+"CMakeFiles/tcp_reciever.dir/test.cc.o" \
 "CMakeFiles/tcp_reciever.dir/util/address.cc.o" \
 "CMakeFiles/tcp_reciever.dir/util/buffer.cc.o" \
 "CMakeFiles/tcp_reciever.dir/util/eventloop.cc.o" \
@@ -291,6 +306,7 @@ src/libtcp_reciever.a: src/CMakeFiles/tcp_reciever.dir/tcp_helpers/tcp_header.cc
 src/libtcp_reciever.a: src/CMakeFiles/tcp_reciever.dir/tcp_helpers/tcp_segment.cc.o
 src/libtcp_reciever.a: src/CMakeFiles/tcp_reciever.dir/tcp_helpers/tcp_state.cc.o
 src/libtcp_reciever.a: src/CMakeFiles/tcp_reciever.dir/tcp_receiver.cc.o
+src/libtcp_reciever.a: src/CMakeFiles/tcp_reciever.dir/test.cc.o
 src/libtcp_reciever.a: src/CMakeFiles/tcp_reciever.dir/util/address.cc.o
 src/libtcp_reciever.a: src/CMakeFiles/tcp_reciever.dir/util/buffer.cc.o
 src/libtcp_reciever.a: src/CMakeFiles/tcp_reciever.dir/util/eventloop.cc.o
@@ -301,7 +317,7 @@ src/libtcp_reciever.a: src/CMakeFiles/tcp_reciever.dir/util/util.cc.o
 src/libtcp_reciever.a: src/CMakeFiles/tcp_reciever.dir/wrapping_integers.cc.o
 src/libtcp_reciever.a: src/CMakeFiles/tcp_reciever.dir/build.make
 src/libtcp_reciever.a: src/CMakeFiles/tcp_reciever.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX static library libtcp_reciever.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX static library libtcp_reciever.a"
 	cd /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/src && $(CMAKE_COMMAND) -P CMakeFiles/tcp_reciever.dir/cmake_clean_target.cmake
 	cd /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tcp_reciever.dir/link.txt --verbose=$(VERBOSE)
 

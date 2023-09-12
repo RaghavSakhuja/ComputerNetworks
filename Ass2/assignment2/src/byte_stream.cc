@@ -37,7 +37,7 @@ size_t ByteStream::write(const string &data) {
 }
 
 size_t ByteStream::remaining_capacity() const {
-  cout<<"capacity: "<<capacity-buffer.size()<<endl;
+  // cout<<"capacity: "<<capacity-buffer.size()<<endl;
   return capacity-buffer.size();
 }
 

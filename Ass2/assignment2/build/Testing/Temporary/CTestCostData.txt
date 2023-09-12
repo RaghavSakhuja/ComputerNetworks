@@ -1,16 +1,40 @@
-wrapping_integers_cmp 5 0.000533954
+wrapping_integers_cmp 7 0.000308934
 wrapping_integers_unwrap 0 0
-wrapping_integers_wrap 5 0.000259684
+wrapping_integers_wrap 7 0.000146004
 wrapping_integers_roundtrip 0 0
-byte_stream_construction 10 0.00016217
-byte_stream_one_write 7 0.0002118
-byte_stream_two_writes 7 0.000261695
-byte_stream_capacity 12 0.137415
-byte_stream_many_writes 15 0.000404653
+byte_stream_construction 13 8.13358e-05
+byte_stream_one_write 10 0.000112829
+byte_stream_two_writes 10 0.000109378
+byte_stream_capacity 15 0.10684
+byte_stream_many_writes 18 9.2266e-05
 recv_connect 0 0
 recv_transmit 0 0
 recv_window 0 0
 recv_reorder 0 0
 recv_close 0 0
-recv_special 5 0.000218384
+recv_special 5 0
+fsm_stream_reassembler_cap 0 0
+fsm_stream_reassembler_single 0 0
+fsm_stream_reassembler_seq 0 0
+fsm_stream_reassembler_dup 0 0
+fsm_stream_reassembler_holes 0 0
+fsm_stream_reassembler_many 0 0
+fsm_stream_reassembler_overlapping 0 0
+fsm_stream_reassembler_win 0 0
 ---
+wrapping_integers_unwrap
+wrapping_integers_roundtrip
+recv_connect
+recv_transmit
+recv_window
+recv_reorder
+recv_close
+recv_special
+fsm_stream_reassembler_cap
+fsm_stream_reassembler_single
+fsm_stream_reassembler_seq
+fsm_stream_reassembler_dup
+fsm_stream_reassembler_holes
+fsm_stream_reassembler_many
+fsm_stream_reassembler_overlapping
+fsm_stream_reassembler_win

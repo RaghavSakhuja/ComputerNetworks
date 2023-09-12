@@ -284,6 +284,30 @@ tcp_receiver.cc.s:
 	cd /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/tcp_reciever.dir/build.make src/CMakeFiles/tcp_reciever.dir/tcp_receiver.cc.s
 .PHONY : tcp_receiver.cc.s
 
+test.o: test.cc.o
+.PHONY : test.o
+
+# target to build an object file
+test.cc.o:
+	cd /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/tcp_reciever.dir/build.make src/CMakeFiles/tcp_reciever.dir/test.cc.o
+.PHONY : test.cc.o
+
+test.i: test.cc.i
+.PHONY : test.i
+
+# target to preprocess a source file
+test.cc.i:
+	cd /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/tcp_reciever.dir/build.make src/CMakeFiles/tcp_reciever.dir/test.cc.i
+.PHONY : test.cc.i
+
+test.s: test.cc.s
+.PHONY : test.s
+
+# target to generate assembly for a file
+test.cc.s:
+	cd /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/tcp_reciever.dir/build.make src/CMakeFiles/tcp_reciever.dir/test.cc.s
+.PHONY : test.cc.s
+
 util/address.o: util/address.cc.o
 .PHONY : util/address.o
 
@@ -504,6 +528,9 @@ help:
 	@echo "... tcp_receiver.o"
 	@echo "... tcp_receiver.i"
 	@echo "... tcp_receiver.s"
+	@echo "... test.o"
+	@echo "... test.i"
+	@echo "... test.s"
 	@echo "... util/address.o"
 	@echo "... util/address.i"
 	@echo "... util/address.s"
