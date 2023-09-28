@@ -21,10 +21,10 @@ StreamReassembler::StreamReassembler(const size_t capa)
 void StreamReassembler::push_substring(const string &data, const size_t index, const bool eof)
 {
     size_t end_idx=index+data.size();
-    if(end_idx>acknowledged+capacity){
+    if(index>acknowledged+capacity){
         return;
     }
-
+    cout<<"push substring: "<<data<<endl;
     packet p;
     p.data=data;
     p.index=index;
@@ -71,25 +71,46 @@ void StreamReassembler::push_substring(const string &data, const size_t index, c
     sort(buffer.begin(),buffer.end(),[](const packet &a,const packet &b){
         return a.index<b.index;
     });
+    vector<packet> new_buffer2;
     unassembled=0;
     // push into output
     for(auto it=buffer.begin();it!=buffer.end();it++){
+        cout<<it->index<<" "<<it->length<<" "<<acknowledged<<endl;
         if(it->index==acknowledged){
-            _output.write(it->data);
-            acknowledged+=it->length;
-            if(it->eof){
+            size_t wriien=_output.write(it->data);
+            cout<<"written: "<<it->data<<endl;
+            cout<<_output.peek_output(10)<<endl;
+            acknowledged+=wriien;
+            if(it->eof && wriien==it->length){
                 reached_eof=true;
             }
+            if(wriien<it->length){
+                unassembled+=it->length-wriien;
+                packet pack;
+                pack.index=it->index+wriien;
+                pack.data=it->data.substr(wriien);
+                pack.length=pack.data.size();
+                pack.eof=it->eof;
+                new_buffer2.push_back(pack);
+            }
         }
-        else{
+        else{ 
             unassembled+=it->length;
+            new_buffer2.push_back(*it);
         }
     }
+    buffer=new_buffer2;
+    sort(buffer.begin(),buffer.end(),[](const packet &a,const packet &b){
+        return a.index<b.index;
+    });
 
     if(reached_eof && unassembled==0){
         _output.end_input();
     }
-    
+    cout<<"acknowledged: "<<acknowledged<<endl;
+    cout<<"unassembled: "<<unassembled<<endl;
+    cout<<_output.peek_output(10)<<endl;
+    cout<<_output.buffer_size()<<endl;
 }
 size_t StreamReassembler::unassembled_bytes() const { 
     return unassembled;

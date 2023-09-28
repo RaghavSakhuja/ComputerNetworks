@@ -34,14 +34,18 @@ int main() {
 
             test.execute(SubmitSegment{"cd", 2});
             test.execute(BytesAssembled(2));
+            // cout<<"-------------------------------------1\n";
 
             test.execute(BytesAvailable("ab"));
             test.execute(BytesAssembled(2));
+            // cout<<"-------------------------------------2\n";
 
             test.execute(SubmitSegment{"cd", 2});
             test.execute(BytesAssembled(4));
+            // cout<<"-------------------------------------3\n";
 
             test.execute(BytesAvailable("cd"));
+            cout<<"-------------------------------------\n";
         }
 
         {
