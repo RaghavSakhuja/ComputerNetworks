@@ -8,7 +8,8 @@
 #include <deque>
 #include <iostream>
 #include <string>
-#include <map>
+#include <set>
+#include <vector>
 
 //! \brief A class that assembles a series of excerpts from a byte stream (possibly out of order,
 //! possibly overlapping) into an in-order byte stream.
@@ -17,19 +18,32 @@ class StreamReassembler {
     // Your code here -- add private members as necessary.
     struct packet
     {
-      std::string data;
-      bool eof;
-      packet(const std::string &data, const bool eof):data(data),eof(eof){}
-      packet():data(""),eof(false){}
+      std::string data="";
+      size_t index=0;
+      size_t length=0;
+      bool eof=0;
+      bool operator<(const packet &rhs) const
+      {
+        return index<rhs.index;
+      }
     };
     
-
-    ByteStream _output;  //!< The reassembled in-order byte stream
-    std::map<size_t,packet> buffer;
-    size_t buffersize;
+    std::vector<packet> buffer;
     size_t capacity;
     size_t acknowledged;
+    size_t unassembled;
     bool reached_eof;
+    ByteStream _output;
+
+    bool overlap(const packet &p1,const packet &p2)
+    {
+      if(p1.index+p1.length<=p2.index)
+        return false;
+      if(p2.index+p2.length<=p1.index)
+        return false;
+      return true;
+    }
+
 
     
 
@@ -72,26 +86,4 @@ class StreamReassembler {
 
 #endif  // SPONGE_LIBSPONGE_STREAM_REASSEMBLER_HH
 
-
-/*
-
-home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/src/stream_reassembler.cc:37:28:   required from here
-/usr/include/c++/11/tuple:1820:9: error: no matching function for call to ‘StreamReassembler::packet::packet()’
- 1820 |         second(std::forward<_Args2>(std::get<_Indexes2>(__tuple2))...)
-      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/src/stream_reassembler.cc:1:
-/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/src/stream_reassembler.hh:22:7: note: candidate: ‘StreamReassembler::packet::packet(const string&, bool)’
-   22 |       packet(const std::string &data, const bool eof):data(data),eof(eof){}
-      |       ^~~~~~
-/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/src/stream_reassembler.hh:22:7: note:   candidate expects 2 arguments, 0 provided
-/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/src/stream_reassembler.hh:18:12: note: candidate: ‘StreamReassembler::packet::packet(const StreamReassembler::packet&)’
-   18 |     struct packet
-      |            ^~~~~~
-/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/src/stream_reassembler.hh:18:12: note:   candidate expects 1 argument, 0 provided
-/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/src/stream_reassembler.hh:18:12: note: candidate: ‘StreamReassembler::packet::packet(StreamReassembler::packet&&)’
-/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/src/stream_reassembler.hh:18:12: note:   candidate expects 1 argument, 0 provided
-make[2]: *** [src/CMakeFiles/tcp_reciever.dir/build.make:90: src/CMakeFiles/tcp_reciever.dir/stream_reassembler.cc.o] Error 1
-
-
-*/
 
