@@ -35,7 +35,7 @@ class StreamReassembler {
 
     bool overlap(const packet &p1,const packet &p2);
 
-    long merging(packet& elm1, const packet& elm2);
+    long merging(packet& p1, const packet& p2);
 
     
 

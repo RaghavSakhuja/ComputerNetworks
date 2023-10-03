@@ -1,4 +1,7 @@
-16:fsm_stream_reassembler_cap
-20:fsm_stream_reassembler_holes
-22:fsm_stream_reassembler_overlapping
-23:fsm_stream_reassembler_win
+2:wrapping_integers_unwrap
+4:wrapping_integers_roundtrip
+10:recv_connect
+11:recv_transmit
+12:recv_window
+13:recv_reorder
+14:recv_close

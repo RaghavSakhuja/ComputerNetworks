@@ -25,7 +25,6 @@ void StreamReassembler::push_substring(const string &data, const size_t index, c
     if(index>=acknowledged+capacity)
         return;
 
-
     packet p;
     if(end<=acknowledged){
         if(eof)
@@ -39,26 +38,26 @@ void StreamReassembler::push_substring(const string &data, const size_t index, c
         p.index=acknowledged;
         p.length=data.size()-offset;
         p.data=data.substr(offset);
-        unassembled+=p.length;
     }
     else{
         p.index=index;
         p.length=data.size();
         p.data=data;
-        unassembled+=p.length;
     }
+    unassembled+=p.length;
 
     for(size_t i=0;i<buffer.size();i++){
         if(overlap(p,buffer[i])){
-            unassembled-=merging(p,buffer[i]);
+            size_t merged=merging(p,buffer[i]);
+            unassembled-=merged;
             buffer.erase(buffer.begin()+i);
             i--;
         }   
     }
-    
     buffer.push_back(p);
-
     sort(buffer.begin(),buffer.end());
+    // for(auto i:buffer)
+    //     cout<<i.index<<" "<<i.length<<" "<<i.data<<endl;
 
     if(buffer[0].index==acknowledged){
         packet p=buffer[0];
@@ -68,14 +67,16 @@ void StreamReassembler::push_substring(const string &data, const size_t index, c
         buffer.erase(buffer.begin());
     }
 
+    // cout<<"unassembled: "<<unassembled<<endl;
+    // cout<<"acknowledged: "<<acknowledged<<endl;
+
     if(eof)
         this->eof=true;
     
     if(this->eof && unassembled==0)
         _output.end_input();
-    }
-    
 }
+
 size_t StreamReassembler::unassembled_bytes() const { 
     return unassembled;
  }
@@ -90,25 +91,29 @@ size_t StreamReassembler::ack_index() const {
 
  bool StreamReassembler::overlap(const packet &p1,const packet &p2)
  {
-    if(p1.index+p1.length<=p2.index)
+    packet smaller=p1.index<p2.index?p1:p2;
+    packet larger=p1.index<p2.index?p2:p1;
+
+    if(smaller.index+smaller.length<larger.index)
         return false;
-    if(p2.index+p2.length<=p1.index)
-        return false;
-    return true;
+    else
+        return true;
+
  }
 
-long StreamReassembler::merging(packet& elm1, const packet& elm2)
+long StreamReassembler::merging(packet& p1, const packet& p2)
 {
-    if(elm1.index+elm1.length<=elm2.index+elm2.length){
-        long offset=elm1.index+elm1.length-elm2.index;
-        elm1.length+=elm2.length-offset;
-        elm1.data+=elm2.data.substr(offset);
-        return elm2.length-offset;
+    packet smaller=p1.index<p2.index?p1:p2;
+    packet larger=p1.index<p2.index?p2:p1;
+    
+    if(smaller.index+smaller.length>=larger.index+larger.length){
+        p1=smaller;
+        return larger.length;
     }
     else{
-        long offset=elm2.index+elm2.length-elm1.index;
-        elm1.length+=elm2.length-offset;
-        elm1.data=elm2.data+elm1.data.substr(offset);
-        return elm2.length-offset;
+        p1.index=smaller.index;
+        p1.data=smaller.data+larger.data.substr(smaller.index+smaller.length-larger.index);
+        p1.length=p1.data.size();
+        return smaller.index+smaller.length-larger.index;
     }
 }
