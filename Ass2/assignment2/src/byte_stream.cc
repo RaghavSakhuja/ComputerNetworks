@@ -65,10 +65,17 @@ void ByteStream::pop_output(const size_t len) {
 //! \param[in] len bytes will be popped and returned
 //! \returns a string
 std::string ByteStream::read(const size_t len) {
+  // cout<<"here\n"<<len<<" "<<buffer_size()<<endl;
   if(len>buffer.size())
+  {
+    // cout<<"in\n";
+    // cout<<len<<" "<<buffer.size()<<endl;
     set_error();
     return "";
+  }
+  // cout<<"read: "<<len<<endl;
   string data=peek_output(len);
+  // cout<<data<<endl;
   pop_output(len);
   return data;
 }
