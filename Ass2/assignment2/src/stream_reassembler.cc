@@ -11,7 +11,7 @@ using namespace std;
 
 
 StreamReassembler::StreamReassembler(const size_t capa)
-    :capacity(capa),acknowledged(0),unassembled(0),reached_eof(false),_output(capa)
+    :_output(capa),capacity(capa),unassembled(0),acknowledged(0),eof(false)
 {}
 
 
@@ -20,75 +20,60 @@ StreamReassembler::StreamReassembler(const size_t capa)
 //! contiguous substrings and writes them into the output stream in order.
 void StreamReassembler::push_substring(const string &data, const size_t index, const bool eof)
 {
-    size_t end_idx=index+data.size();
-    if(end_idx>acknowledged+capacity){
+    size_t end=index+data.size();
+
+    if(index>=acknowledged+capacity)
         return;
-    }
+
 
     packet p;
-    p.data=data;
-    p.index=index;
-    p.length=data.size();
-    p.eof=eof;
-
-    if(index<acknowledged){
-        if(end_idx<=acknowledged){
-            return;
-        }
-        p.data=p.data.substr(acknowledged-index);
+    if(end<=acknowledged){
+        if(eof)
+            this->eof=true;
+        if(this->eof && unassembled==0)
+            _output.end_input();
+        return;
+    }
+    else if(index<acknowledged){
+        size_t offset=acknowledged-index;
         p.index=acknowledged;
-        p.length=p.data.size();
+        p.length=data.size()-offset;
+        p.data=data.substr(offset);
+        unassembled+=p.length;
+    }
+    else{
+        p.index=index;
+        p.length=data.size();
+        p.data=data;
+        unassembled+=p.length;
     }
 
-    vector<packet> new_buffer;
-    for(auto it=buffer.begin();it!=buffer.end();it++){
-        if(overlap(*it,p)){
-            packet p2=*it;
-            //merge p and p2 into 
-            packet pack;
-            if(p2.index<p.index){
-                pack.index=p2.index;
-                pack.data=p2.data+p.data.substr(p2.index+p2.length-p.index);
-                pack.length=pack.data.size();
-                pack.eof=p2.eof;
-                new_buffer.push_back(pack);
-            }
-            else{
-                pack.index=p.index;
-                pack.data=p.data+p2.data.substr(p.index+p.length-p2.index);
-                pack.length=pack.data.size();
-                pack.eof=p.eof;
-                new_buffer.push_back(pack);
-            }
-            p=pack;
-        }
-        else{
-            new_buffer.push_back(*it);
-        }
+    for(size_t i=0;i<buffer.size();i++){
+        if(overlap(p,buffer[i])){
+            unassembled-=merging(p,buffer[i]);
+            buffer.erase(buffer.begin()+i);
+            i--;
+        }   
     }
-    new_buffer.push_back(p);
-    buffer=new_buffer;
-    sort(buffer.begin(),buffer.end(),[](const packet &a,const packet &b){
-        return a.index<b.index;
-    });
-    unassembled=0;
-    // push into output
-    for(auto it=buffer.begin();it!=buffer.end();it++){
-        if(it->index==acknowledged){
-            _output.write(it->data);
-            acknowledged+=it->length;
-            if(it->eof){
-                reached_eof=true;
-            }
-        }
-        else{
-            unassembled+=it->length;
-        }
+    
+    buffer.push_back(p);
+
+    sort(buffer.begin(),buffer.end());
+
+    if(buffer[0].index==acknowledged){
+        packet p=buffer[0];
+        size_t bytes_written=_output.write(p.data);
+        unassembled-=bytes_written;
+        acknowledged+=bytes_written;
+        buffer.erase(buffer.begin());
     }
 
-    if(reached_eof && unassembled==0){
+    if(eof)
+        this->eof=true;
+    
+    if(this->eof && unassembled==0)
         _output.end_input();
-    }
+    
     
 }
 size_t StreamReassembler::unassembled_bytes() const { 
@@ -102,3 +87,28 @@ bool StreamReassembler::empty() const {
 size_t StreamReassembler::ack_index() const { 
     return acknowledged;
  }
+
+ bool StreamReassembler::overlap(const packet &p1,const packet &p2)
+ {
+    if(p1.index+p1.length<=p2.index)
+        return false;
+    if(p2.index+p2.length<=p1.index)
+        return false;
+    return true;
+ }
+
+long StreamReassembler::merging(packet& elm1, const packet& elm2)
+{
+    if(elm1.index+elm1.length<=elm2.index+elm2.length){
+        long offset=elm1.index+elm1.length-elm2.index;
+        elm1.length+=elm2.length-offset;
+        elm1.data+=elm2.data.substr(offset);
+        return elm2.length-offset;
+    }
+    else{
+        long offset=elm2.index+elm2.length-elm1.index;
+        elm1.length+=elm2.length-offset;
+        elm1.data=elm2.data+elm1.data.substr(offset);
+        return elm2.length-offset;
+    }
+}

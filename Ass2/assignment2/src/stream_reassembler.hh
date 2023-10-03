@@ -16,34 +16,26 @@
 class StreamReassembler {
   private:
     // Your code here -- add private members as necessary.
+
     struct packet
     {
-      std::string data="";
       size_t index=0;
-      size_t length=0;
-      bool eof=0;
-      bool operator<(const packet &rhs) const
-      {
-        return index<rhs.index;
-      }
+      size_t length = 0;
+      std::string data = "";
+      bool operator<(const packet& t) const { return index < t.index; }
     };
     
     std::vector<packet> buffer;
-    size_t capacity;
     size_t acknowledged;
     size_t unassembled;
-    bool reached_eof;
+    size_t capacity;
+    bool eof;
+
     ByteStream _output;
 
-    bool overlap(const packet &p1,const packet &p2)
-    {
-      if(p1.index+p1.length<=p2.index)
-        return false;
-      if(p2.index+p2.length<=p1.index)
-        return false;
-      return true;
-    }
+    bool overlap(const packet &p1,const packet &p2);
 
+    long merging(packet& elm1, const packet& elm2);
 
     
 
