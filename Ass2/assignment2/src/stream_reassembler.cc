@@ -26,6 +26,10 @@ void StreamReassembler::push_substring(const string &data, const size_t index, c
         return;
 
     packet p;
+    p.index=index;
+    p.length=data.size();
+    p.data=data;
+
     if(end<=acknowledged){
         if(eof)
             this->eof=true;
@@ -39,11 +43,6 @@ void StreamReassembler::push_substring(const string &data, const size_t index, c
         p.length=data.size()-offset;
         p.data=data.substr(offset);
     }
-    else{
-        p.index=index;
-        p.length=data.size();
-        p.data=data;
-    }
     unassembled+=p.length;
 
     for(size_t i=0;i<buffer.size();i++){
@@ -54,8 +53,10 @@ void StreamReassembler::push_substring(const string &data, const size_t index, c
             i--;
         }   
     }
+
     buffer.push_back(p);
     sort(buffer.begin(),buffer.end());
+
     // for(auto i:buffer)
     //     cout<<i.index<<" "<<i.length<<" "<<i.data<<endl;
 
