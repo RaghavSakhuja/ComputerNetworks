@@ -1,17 +1,17 @@
-Start testing: Oct 03 21:48 IST
+Start testing: Oct 06 19:15 IST
 ----------------------------------------------------------
 1/23 Testing: wrapping_integers_cmp
 1/23 Test: wrapping_integers_cmp
 Command: "/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/tests/wrapping_integers_cmp"
 Directory: /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/tests
-"wrapping_integers_cmp" start time: Oct 03 21:48 IST
+"wrapping_integers_cmp" start time: Oct 06 19:15 IST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"wrapping_integers_cmp" end time: Oct 03 21:48 IST
+"wrapping_integers_cmp" end time: Oct 06 19:15 IST
 "wrapping_integers_cmp" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -19,20 +19,14 @@ Test Passed.
 2/23 Test: wrapping_integers_unwrap
 Command: "/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/tests/wrapping_integers_unwrap"
 Directory: /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/tests
-"wrapping_integers_unwrap" start time: Oct 03 21:48 IST
+"wrapping_integers_unwrap" start time: Oct 06 19:15 IST
 Output:
 ----------------------------------------------------------
-`unwrap(WrappingInt32(1), WrappingInt32(0), 0)` should have been `1ul`, but the former is
-	0
-and the latter is
-	1
- (at line 15)
-
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
-Test Failed.
-"wrapping_integers_unwrap" end time: Oct 03 21:48 IST
+Test Passed.
+"wrapping_integers_unwrap" end time: Oct 06 19:15 IST
 "wrapping_integers_unwrap" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -40,14 +34,14 @@ Test Failed.
 3/23 Test: wrapping_integers_wrap
 Command: "/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/tests/wrapping_integers_wrap"
 Directory: /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/tests
-"wrapping_integers_wrap" start time: Oct 03 21:48 IST
+"wrapping_integers_wrap" start time: Oct 06 19:15 IST
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"wrapping_integers_wrap" end time: Oct 03 21:48 IST
+"wrapping_integers_wrap" end time: Oct 06 19:15 IST
 "wrapping_integers_wrap" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -55,19 +49,14 @@ Test Passed.
 4/23 Test: wrapping_integers_roundtrip
 Command: "/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/tests/wrapping_integers_roundtrip"
 Directory: /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/tests
-"wrapping_integers_roundtrip" start time: Oct 03 21:48 IST
+"wrapping_integers_roundtrip" start time: Oct 06 19:15 IST
 Output:
 ----------------------------------------------------------
-Expected unwrap(wrap()) to recover same value, and it didn't!
-  unwrap(wrap(value, isn), isn, checkpoint) did not equal value
-  where value = 8266578311444896423, isn = 2659649029, and checkpoint = 8266578311444896423
-  (Difference between value and checkpoint is 0.)
-
 <end of output>
-Test time =   0.00 sec
+Test time =   0.39 sec
 ----------------------------------------------------------
-Test Failed.
-"wrapping_integers_roundtrip" end time: Oct 03 21:48 IST
+Test Passed.
+"wrapping_integers_roundtrip" end time: Oct 06 19:15 IST
 "wrapping_integers_roundtrip" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -75,14 +64,14 @@ Test Failed.
 5/23 Test: byte_stream_construction
 Command: "/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/tests/byte_stream_construction"
 Directory: /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/tests
-"byte_stream_construction" start time: Oct 03 21:48 IST
+"byte_stream_construction" start time: Oct 06 19:15 IST
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"byte_stream_construction" end time: Oct 03 21:48 IST
+"byte_stream_construction" end time: Oct 06 19:15 IST
 "byte_stream_construction" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -90,14 +79,14 @@ Test Passed.
 6/23 Test: byte_stream_one_write
 Command: "/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/tests/byte_stream_one_write"
 Directory: /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/tests
-"byte_stream_one_write" start time: Oct 03 21:48 IST
+"byte_stream_one_write" start time: Oct 06 19:15 IST
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"byte_stream_one_write" end time: Oct 03 21:48 IST
+"byte_stream_one_write" end time: Oct 06 19:15 IST
 "byte_stream_one_write" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -105,14 +94,14 @@ Test Passed.
 7/23 Test: byte_stream_two_writes
 Command: "/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/tests/byte_stream_two_writes"
 Directory: /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/tests
-"byte_stream_two_writes" start time: Oct 03 21:48 IST
+"byte_stream_two_writes" start time: Oct 06 19:15 IST
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"byte_stream_two_writes" end time: Oct 03 21:48 IST
+"byte_stream_two_writes" end time: Oct 06 19:15 IST
 "byte_stream_two_writes" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -120,14 +109,14 @@ Test Passed.
 8/23 Test: byte_stream_capacity
 Command: "/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/tests/byte_stream_capacity"
 Directory: /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/tests
-"byte_stream_capacity" start time: Oct 03 21:48 IST
+"byte_stream_capacity" start time: Oct 06 19:15 IST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   1.02 sec
+Test time =   1.30 sec
 ----------------------------------------------------------
 Test Passed.
-"byte_stream_capacity" end time: Oct 03 21:48 IST
+"byte_stream_capacity" end time: Oct 06 19:15 IST
 "byte_stream_capacity" time elapsed: 00:00:01
 ----------------------------------------------------------
 
@@ -135,14 +124,14 @@ Test Passed.
 9/23 Test: byte_stream_many_writes
 Command: "/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/tests/byte_stream_many_writes"
 Directory: /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/tests
-"byte_stream_many_writes" start time: Oct 03 21:48 IST
+"byte_stream_many_writes" start time: Oct 06 19:15 IST
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"byte_stream_many_writes" end time: Oct 03 21:48 IST
+"byte_stream_many_writes" end time: Oct 06 19:15 IST
 "byte_stream_many_writes" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -150,7 +139,7 @@ Test Passed.
 10/23 Test: recv_connect
 Command: "/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/tests/recv_connect"
 Directory: /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/tests
-"recv_connect" start time: Oct 03 21:48 IST
+"recv_connect" start time: Oct 06 19:15 IST
 Output:
 ----------------------------------------------------------
 Test Failure on expectation:
@@ -167,7 +156,7 @@ The TCPReceiver reported window `0`, but it was expected to be `4000`
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Failed.
-"recv_connect" end time: Oct 03 21:48 IST
+"recv_connect" end time: Oct 06 19:15 IST
 "recv_connect" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -175,7 +164,7 @@ Test Failed.
 11/23 Test: recv_transmit
 Command: "/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/tests/recv_transmit"
 Directory: /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/tests
-"recv_transmit" start time: Oct 03 21:48 IST
+"recv_transmit" start time: Oct 06 19:15 IST
 Output:
 ----------------------------------------------------------
 Test Failure on expectation:
@@ -192,7 +181,7 @@ TCPReceiver::segment_received() reported `(no SYN received, so no ackno availabl
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Failed.
-"recv_transmit" end time: Oct 03 21:48 IST
+"recv_transmit" end time: Oct 06 19:15 IST
 "recv_transmit" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -200,7 +189,7 @@ Test Failed.
 12/23 Test: recv_window
 Command: "/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/tests/recv_window"
 Directory: /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/tests
-"recv_window" start time: Oct 03 21:48 IST
+"recv_window" start time: Oct 06 19:15 IST
 Output:
 ----------------------------------------------------------
 Test Failure on expectation:
@@ -217,7 +206,7 @@ TCPReceiver::segment_received() reported `(no SYN received, so no ackno availabl
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Failed.
-"recv_window" end time: Oct 03 21:48 IST
+"recv_window" end time: Oct 06 19:15 IST
 "recv_window" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -225,24 +214,24 @@ Test Failed.
 13/23 Test: recv_reorder
 Command: "/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/tests/recv_reorder"
 Directory: /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/tests
-"recv_reorder" start time: Oct 03 21:48 IST
+"recv_reorder" start time: Oct 06 19:15 IST
 Output:
 ----------------------------------------------------------
 Test Failure on expectation:
-	Action:      segment arrives Header(flags=S,seqno=2427577970,ack=0,win=0)
+	Action:      segment arrives Header(flags=S,seqno=2608496639,ack=0,win=0)
 
 Failure message:
-	TCPReceiver::segment_received() reported `(no SYN received, so no ackno available)` in response to `Header(flags=S,seqno=2427577970,ack=0,win=0)`, but it was expected to report `(SYN received, so ackno available)`
+	TCPReceiver::segment_received() reported `(no SYN received, so no ackno available)` in response to `Header(flags=S,seqno=2608496639,ack=0,win=0)`, but it was expected to report `(SYN received, so ackno available)`
 
 List of steps that executed successfully:
 	Initialized with (capacity=2358)
 
-TCPReceiver::segment_received() reported `(no SYN received, so no ackno available)` in response to `Header(flags=S,seqno=2427577970,ack=0,win=0)`, but it was expected to report `(SYN received, so ackno available)`
+TCPReceiver::segment_received() reported `(no SYN received, so no ackno available)` in response to `Header(flags=S,seqno=2608496639,ack=0,win=0)`, but it was expected to report `(SYN received, so ackno available)`
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Failed.
-"recv_reorder" end time: Oct 03 21:48 IST
+"recv_reorder" end time: Oct 06 19:15 IST
 "recv_reorder" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -250,25 +239,25 @@ Test Failed.
 14/23 Test: recv_close
 Command: "/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/tests/recv_close"
 Directory: /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/tests
-"recv_close" start time: Oct 03 21:48 IST
+"recv_close" start time: Oct 06 19:15 IST
 Output:
 ----------------------------------------------------------
 Test Failure on expectation:
-	Action:      segment arrives Header(flags=S,seqno=3183959208,ack=0,win=0)
+	Action:      segment arrives Header(flags=S,seqno=3122147075,ack=0,win=0)
 
 Failure message:
-	TCPReceiver::segment_received() reported `(no SYN received, so no ackno available)` in response to `Header(flags=S,seqno=3183959208,ack=0,win=0)`, but it was expected to report `(SYN received, so ackno available)`
+	TCPReceiver::segment_received() reported `(no SYN received, so no ackno available)` in response to `Header(flags=S,seqno=3122147075,ack=0,win=0)`, but it was expected to report `(SYN received, so ackno available)`
 
 List of steps that executed successfully:
 	Initialized with (capacity=4000)
 	Expectation: in state `waiting for SYN: ackno is empty`
 
-TCPReceiver::segment_received() reported `(no SYN received, so no ackno available)` in response to `Header(flags=S,seqno=3183959208,ack=0,win=0)`, but it was expected to report `(SYN received, so ackno available)`
+TCPReceiver::segment_received() reported `(no SYN received, so no ackno available)` in response to `Header(flags=S,seqno=3122147075,ack=0,win=0)`, but it was expected to report `(SYN received, so ackno available)`
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Failed.
-"recv_close" end time: Oct 03 21:48 IST
+"recv_close" end time: Oct 06 19:15 IST
 "recv_close" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -276,7 +265,7 @@ Test Failed.
 15/23 Test: recv_special
 Command: "/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/tests/recv_special"
 Directory: /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/tests
-"recv_special" start time: Oct 03 21:48 IST
+"recv_special" start time: Oct 06 19:15 IST
 Output:
 ----------------------------------------------------------
 Basic reassembly test passed!
@@ -289,7 +278,7 @@ All tests passed!
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"recv_special" end time: Oct 03 21:48 IST
+"recv_special" end time: Oct 06 19:15 IST
 "recv_special" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -297,15 +286,15 @@ Test Passed.
 16/23 Test: fsm_stream_reassembler_cap
 Command: "/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/tests/fsm_stream_reassembler_cap"
 Directory: /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/tests
-"fsm_stream_reassembler_cap" start time: Oct 03 21:48 IST
+"fsm_stream_reassembler_cap" start time: Oct 06 19:15 IST
 Output:
 ----------------------------------------------------------
 -------------------------------------
 <end of output>
-Test time =   0.15 sec
+Test time =   0.19 sec
 ----------------------------------------------------------
 Test Passed.
-"fsm_stream_reassembler_cap" end time: Oct 03 21:48 IST
+"fsm_stream_reassembler_cap" end time: Oct 06 19:15 IST
 "fsm_stream_reassembler_cap" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -313,14 +302,14 @@ Test Passed.
 17/23 Test: fsm_stream_reassembler_single
 Command: "/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/tests/fsm_stream_reassembler_single"
 Directory: /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/tests
-"fsm_stream_reassembler_single" start time: Oct 03 21:48 IST
+"fsm_stream_reassembler_single" start time: Oct 06 19:15 IST
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"fsm_stream_reassembler_single" end time: Oct 03 21:48 IST
+"fsm_stream_reassembler_single" end time: Oct 06 19:15 IST
 "fsm_stream_reassembler_single" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -328,14 +317,14 @@ Test Passed.
 18/23 Test: fsm_stream_reassembler_seq
 Command: "/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/tests/fsm_stream_reassembler_seq"
 Directory: /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/tests
-"fsm_stream_reassembler_seq" start time: Oct 03 21:48 IST
+"fsm_stream_reassembler_seq" start time: Oct 06 19:15 IST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.00 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"fsm_stream_reassembler_seq" end time: Oct 03 21:48 IST
+"fsm_stream_reassembler_seq" end time: Oct 06 19:15 IST
 "fsm_stream_reassembler_seq" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -343,14 +332,14 @@ Test Passed.
 19/23 Test: fsm_stream_reassembler_dup
 Command: "/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/tests/fsm_stream_reassembler_dup"
 Directory: /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/tests
-"fsm_stream_reassembler_dup" start time: Oct 03 21:48 IST
+"fsm_stream_reassembler_dup" start time: Oct 06 19:15 IST
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"fsm_stream_reassembler_dup" end time: Oct 03 21:48 IST
+"fsm_stream_reassembler_dup" end time: Oct 06 19:15 IST
 "fsm_stream_reassembler_dup" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -358,14 +347,14 @@ Test Passed.
 20/23 Test: fsm_stream_reassembler_holes
 Command: "/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/tests/fsm_stream_reassembler_holes"
 Directory: /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/tests
-"fsm_stream_reassembler_holes" start time: Oct 03 21:48 IST
+"fsm_stream_reassembler_holes" start time: Oct 06 19:15 IST
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"fsm_stream_reassembler_holes" end time: Oct 03 21:48 IST
+"fsm_stream_reassembler_holes" end time: Oct 06 19:15 IST
 "fsm_stream_reassembler_holes" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -373,14 +362,14 @@ Test Passed.
 21/23 Test: fsm_stream_reassembler_many
 Command: "/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/tests/fsm_stream_reassembler_many"
 Directory: /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/tests
-"fsm_stream_reassembler_many" start time: Oct 03 21:48 IST
+"fsm_stream_reassembler_many" start time: Oct 06 19:15 IST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.28 sec
+Test time =   0.38 sec
 ----------------------------------------------------------
 Test Passed.
-"fsm_stream_reassembler_many" end time: Oct 03 21:48 IST
+"fsm_stream_reassembler_many" end time: Oct 06 19:15 IST
 "fsm_stream_reassembler_many" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -388,14 +377,14 @@ Test Passed.
 22/23 Test: fsm_stream_reassembler_overlapping
 Command: "/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/tests/fsm_stream_reassembler_overlapping"
 Directory: /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/tests
-"fsm_stream_reassembler_overlapping" start time: Oct 03 21:48 IST
+"fsm_stream_reassembler_overlapping" start time: Oct 06 19:15 IST
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"fsm_stream_reassembler_overlapping" end time: Oct 03 21:48 IST
+"fsm_stream_reassembler_overlapping" end time: Oct 06 19:15 IST
 "fsm_stream_reassembler_overlapping" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -403,15 +392,15 @@ Test Passed.
 23/23 Test: fsm_stream_reassembler_win
 Command: "/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/tests/fsm_stream_reassembler_win"
 Directory: /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/build/tests
-"fsm_stream_reassembler_win" start time: Oct 03 21:48 IST
+"fsm_stream_reassembler_win" start time: Oct 06 19:15 IST
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.27 sec
+Test time =   0.32 sec
 ----------------------------------------------------------
 Test Passed.
-"fsm_stream_reassembler_win" end time: Oct 03 21:48 IST
+"fsm_stream_reassembler_win" end time: Oct 06 19:15 IST
 "fsm_stream_reassembler_win" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Oct 03 21:48 IST
+End testing: Oct 06 19:15 IST

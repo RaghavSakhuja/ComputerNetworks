@@ -1,5 +1,5 @@
 #include "wrapping_integers.hh"
-
+#include "cmath"
 #include <iostream>
 
 using namespace std;
@@ -8,6 +8,8 @@ using namespace std;
 //! \param n The input absolute 64-bit sequence number
 //! \param isn The initial sequence number
 WrappingInt32 wrap(uint64_t n, WrappingInt32 isn) { 
+
+
     return isn + uint32_t(n); 
     }
 
@@ -22,12 +24,35 @@ WrappingInt32 wrap(uint64_t n, WrappingInt32 isn) {
 //! and the other stream runs from the remote TCPSender to the local TCPReceiver and
 //! has a different ISN.
 uint64_t unwrap(WrappingInt32 n, WrappingInt32 isn, uint64_t checkpoint) {
-    uint32_t diff = n.raw_value() - wrap(checkpoint, isn).raw_value();
-    uint64_t res = static_cast<uint64_t>(diff) + checkpoint;
-
-    if (res >= (1ull << 32)) {
-        res -= 1ull << 32;
+    // cout<<"n: "<<n.raw_value()<<" isn: "<<isn.raw_value()<<" checkpoint: "<<checkpoint<<endl;
+    uint64_t n64=static_cast<uint64_t>(n.raw_value());
+    uint64_t isn64=static_cast<uint64_t>(isn.raw_value());
+    uint64_t diff;
+    if(n64>isn64){
+        diff=n64-isn64;
     }
-
-    return res;
+    else{
+        diff=(1ull<<32)-isn64+n64;
+    }
+    if(checkpoint>diff){
+        uint64_t mult=(checkpoint-diff)/(1ull<<32);
+        uint64_t mult2=mult+1;
+        uint64_t diff1=diff+mult*(1ull<<32);
+        uint64_t diff2=diff+mult2*(1ull<<32);
+        if(max(diff1,checkpoint)-min(diff1,checkpoint)<max(diff2,checkpoint)-min(diff2,checkpoint))
+            diff=diff1;
+        else
+            diff=diff2;
+    }
+    else{
+        uint64_t mult=(diff-checkpoint)/(1ull<<32);
+        uint64_t mult2=mult+1;
+        uint64_t diff1=diff-mult*(1ull<<32);
+        uint64_t diff2=diff-mult2*(1ull<<32);
+        if(max(diff1,checkpoint)-min(diff1,checkpoint)<max(diff2,checkpoint)-min(diff2,checkpoint))
+            diff=diff1;
+        else
+            diff=diff2;
+    }
+    return diff;
 }

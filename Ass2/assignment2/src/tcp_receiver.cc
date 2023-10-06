@@ -15,7 +15,7 @@ void TCPReceiver::segment_received(const TCPSegment &seg) {
     uint64_t abs_seqno = unwrap(head.seqno, _isn, checkpoint);
     uint64_t stream_idx = abs_seqno - _synReceived;
     // --- Hint ------  
-
+    // seg.payload.copy();
     // ... 
 }
 
