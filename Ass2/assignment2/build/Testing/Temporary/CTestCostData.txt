@@ -1,29 +1,24 @@
-wrapping_integers_cmp 35 6.13396e-05
-wrapping_integers_unwrap 3 0.000547397
-wrapping_integers_wrap 34 4.44878e-05
-wrapping_integers_roundtrip 3 0.131011
-byte_stream_construction 21 8.99347e-05
-byte_stream_one_write 18 7.20935e-05
-byte_stream_two_writes 18 6.64639e-05
-byte_stream_capacity 23 0.0563094
-byte_stream_many_writes 26 0.000118082
-recv_connect 0 0
-recv_transmit 0 0
-recv_window 0 0
-recv_reorder 0 0
-recv_close 0 0
-recv_special 10 0.000165039
-fsm_stream_reassembler_cap 12 0.0158335
-fsm_stream_reassembler_single 22 0.000179917
-fsm_stream_reassembler_seq 28 0.000276734
-fsm_stream_reassembler_dup 28 0.000319985
-fsm_stream_reassembler_holes 9 0.000248059
-fsm_stream_reassembler_many 33 0.0115359
-fsm_stream_reassembler_overlapping 8 0.000403423
-fsm_stream_reassembler_win 10 0.0322041
+wrapping_integers_cmp 37 9.46465e-05
+wrapping_integers_unwrap 5 0.000848771
+wrapping_integers_wrap 36 0.00011231
+wrapping_integers_roundtrip 5 0.0822045
+byte_stream_construction 23 0.000117472
+byte_stream_one_write 20 0.000109013
+byte_stream_two_writes 20 0.000104383
+byte_stream_capacity 25 0.0520732
+byte_stream_many_writes 28 0.000112162
+recv_connect 4 0.00179803
+recv_transmit 4 0.081244
+recv_window 4 0.00148613
+recv_reorder 4 0.0018336
+recv_close 3 0.00160229
+recv_special 21 0.000236357
+fsm_stream_reassembler_cap 14 0.0145017
+fsm_stream_reassembler_single 24 0.000132653
+fsm_stream_reassembler_seq 30 0.000191098
+fsm_stream_reassembler_dup 30 0.000373363
+fsm_stream_reassembler_holes 11 0.000360905
+fsm_stream_reassembler_many 35 0.00913124
+fsm_stream_reassembler_overlapping 10 0.000269771
+fsm_stream_reassembler_win 12 0.0247869
 ---
-recv_connect
-recv_transmit
-recv_window
-recv_reorder
-recv_close

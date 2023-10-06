@@ -1,5 +1,1 @@
-10:recv_connect
-11:recv_transmit
-12:recv_window
-13:recv_reorder
 14:recv_close

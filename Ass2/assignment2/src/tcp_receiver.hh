@@ -26,6 +26,8 @@ class TCPReceiver {
     //! Flag to indicate whether FIN mesaage has received
     bool _finReceived;
 
+    WrappingInt32 ack;
+
     //! Inital Squence Number
     WrappingInt32 _isn;
 
@@ -35,7 +37,7 @@ class TCPReceiver {
     //! \param capacity the maximum number of bytes that the receiver will
     //!                 store in its buffers at any give time.
     TCPReceiver(const size_t capacity)
-        : _reassembler(capacity), _capacity(capacity), _synReceived(false), _finReceived(false), _isn(0) {}
+        : _reassembler(capacity), _capacity(capacity), _synReceived(false), _finReceived(false), _isn(0), ack{0}{}
 
     //! \name Accessors to provide feedback to the remote TCPSender
     //!@{
