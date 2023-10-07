@@ -66,6 +66,12 @@ void StreamReassembler::push_substring(const string &data, const size_t index, c
         unassembled-=bytes_written;
         acknowledged+=bytes_written;
         buffer.erase(buffer.begin());
+        packet p2;
+        p2.index=acknowledged;
+        p2.data=p.data.substr(bytes_written);
+        p2.length=p2.data.size();
+        buffer.insert(buffer.begin(),p2);
+        sort(buffer.begin(),buffer.end());
     }
 
     // cout<<"unassembled: "<<unassembled<<endl;
