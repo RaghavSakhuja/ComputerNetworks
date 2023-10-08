@@ -1,7 +1,7 @@
 src/CMakeFiles/tcp_reciever.dir/byte_stream.cc.o: \
- /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/src/byte_stream.cc \
+ /home/rag/Desktop/CN/CN/ComputerNetworks/Ass2/assignment2/src/byte_stream.cc \
  /usr/include/stdc-predef.h \
- /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/src/byte_stream.hh \
+ /home/rag/Desktop/CN/CN/ComputerNetworks/Ass2/assignment2/src/byte_stream.hh \
  /usr/include/c++/11/deque /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \

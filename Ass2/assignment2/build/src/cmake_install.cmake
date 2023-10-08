@@ -1,4 +1,4 @@
-# Install script for directory: /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/src
+# Install script for directory: /home/rag/Desktop/CN/CN/ComputerNetworks/Ass2/assignment2/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

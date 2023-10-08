@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/tests/byte_stream_many_writes.cc" "tests/CMakeFiles/byte_stream_many_writes.dir/byte_stream_many_writes.cc.o" "gcc" "tests/CMakeFiles/byte_stream_many_writes.dir/byte_stream_many_writes.cc.o.d"
+  "/home/rag/Desktop/CN/CN/ComputerNetworks/Ass2/assignment2/tests/byte_stream_many_writes.cc" "tests/CMakeFiles/byte_stream_many_writes.dir/byte_stream_many_writes.cc.o" "gcc" "tests/CMakeFiles/byte_stream_many_writes.dir/byte_stream_many_writes.cc.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

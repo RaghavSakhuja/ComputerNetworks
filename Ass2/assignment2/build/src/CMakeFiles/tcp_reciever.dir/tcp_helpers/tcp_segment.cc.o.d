@@ -1,8 +1,8 @@
 src/CMakeFiles/tcp_reciever.dir/tcp_helpers/tcp_segment.cc.o: \
- /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/src/tcp_helpers/tcp_segment.cc \
+ /home/rag/Desktop/CN/CN/ComputerNetworks/Ass2/assignment2/src/tcp_helpers/tcp_segment.cc \
  /usr/include/stdc-predef.h \
- /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/src/tcp_helpers/tcp_segment.hh \
- /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/src/util/buffer.hh \
+ /home/rag/Desktop/CN/CN/ComputerNetworks/Ass2/assignment2/src/tcp_helpers/tcp_segment.hh \
+ /home/rag/Desktop/CN/CN/ComputerNetworks/Ass2/assignment2/src/util/buffer.hh \
  /usr/include/c++/11/algorithm /usr/include/c++/11/utility \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -173,10 +173,10 @@ src/CMakeFiles/tcp_reciever.dir/tcp_helpers/tcp_segment.cc.o: \
  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
  /usr/include/x86_64-linux-gnu/bits/uio-ext.h \
- /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/src/tcp_helpers/tcp_header.hh \
- /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/src/util/parser.hh \
- /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/src/util/buffer.hh \
- /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/src/wrapping_integers.hh \
+ /home/rag/Desktop/CN/CN/ComputerNetworks/Ass2/assignment2/src/tcp_helpers/tcp_header.hh \
+ /home/rag/Desktop/CN/CN/ComputerNetworks/Ass2/assignment2/src/util/parser.hh \
+ /home/rag/Desktop/CN/CN/ComputerNetworks/Ass2/assignment2/src/util/buffer.hh \
+ /home/rag/Desktop/CN/CN/ComputerNetworks/Ass2/assignment2/src/wrapping_integers.hh \
  /usr/include/c++/11/ostream /usr/include/c++/11/ios \
  /usr/include/c++/11/bits/ios_base.h \
  /usr/include/c++/11/bits/locale_classes.h \
@@ -194,7 +194,7 @@ src/CMakeFiles/tcp_reciever.dir/tcp_helpers/tcp_segment.cc.o: \
  /usr/include/c++/11/bits/locale_facets.tcc \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc \
- /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/src/util/util.hh \
+ /home/rag/Desktop/CN/CN/ComputerNetworks/Ass2/assignment2/src/util/util.hh \
  /usr/include/c++/11/cstddef /usr/include/c++/11/iterator \
  /usr/include/c++/11/bits/stream_iterator.h /usr/include/c++/11/random \
  /usr/include/c++/11/cmath /usr/include/math.h \

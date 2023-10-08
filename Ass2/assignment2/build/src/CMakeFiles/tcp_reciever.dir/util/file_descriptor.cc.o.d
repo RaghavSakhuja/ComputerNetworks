@@ -1,8 +1,8 @@
 src/CMakeFiles/tcp_reciever.dir/util/file_descriptor.cc.o: \
- /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/src/util/file_descriptor.cc \
+ /home/rag/Desktop/CN/CN/ComputerNetworks/Ass2/assignment2/src/util/file_descriptor.cc \
  /usr/include/stdc-predef.h \
- /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/src/util/file_descriptor.hh \
- /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/src/util/buffer.hh \
+ /home/rag/Desktop/CN/CN/ComputerNetworks/Ass2/assignment2/src/util/file_descriptor.hh \
+ /home/rag/Desktop/CN/CN/ComputerNetworks/Ass2/assignment2/src/util/buffer.hh \
  /usr/include/c++/11/algorithm /usr/include/c++/11/utility \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -174,7 +174,7 @@ src/CMakeFiles/tcp_reciever.dir/util/file_descriptor.cc.o: \
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
  /usr/include/x86_64-linux-gnu/bits/uio-ext.h /usr/include/c++/11/cstddef \
  /usr/include/c++/11/limits \
- /home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/src/util/util.hh \
+ /home/rag/Desktop/CN/CN/ComputerNetworks/Ass2/assignment2/src/util/util.hh \
  /usr/include/c++/11/iterator /usr/include/c++/11/bits/stream_iterator.h \
  /usr/include/c++/11/bits/streambuf_iterator.h \
  /usr/include/c++/11/streambuf /usr/include/c++/11/bits/ios_base.h \

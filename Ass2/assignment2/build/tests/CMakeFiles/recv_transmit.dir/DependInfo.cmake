@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/rag/Desktop/CN/ComputerNetworks/Ass2/assignment2/tests/recv_transmit.cc" "tests/CMakeFiles/recv_transmit.dir/recv_transmit.cc.o" "gcc" "tests/CMakeFiles/recv_transmit.dir/recv_transmit.cc.o.d"
+  "/home/rag/Desktop/CN/CN/ComputerNetworks/Ass2/assignment2/tests/recv_transmit.cc" "tests/CMakeFiles/recv_transmit.dir/recv_transmit.cc.o" "gcc" "tests/CMakeFiles/recv_transmit.dir/recv_transmit.cc.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
