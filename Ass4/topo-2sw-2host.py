@@ -51,6 +51,6 @@ topos = { 'mytopo': ( lambda: MyTopo() ) }
 
 
 # sudo mn --custom ~/mininet/custom/topo-2sw-2host.py --topo mytopo --mac --switch ovsk --controller remote
-# sudo tc qdisc add dev h1-eth0 root netem delay 10ms rate 1mbit
+# sudo tc qdisc add dev h1-eth0 root netem delay 100ms rate 1mbit
 # sudo ./pox/pox.py forwarding.l2_learning
 
